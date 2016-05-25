@@ -62,11 +62,11 @@ void print_mask(const char *str){
     printf("%s", str);
     if(sigismember(&sigset, SIGINT))
         printf("SIGINT ");
-    if(sigismemeber(&setset, SIGQUIT))
+    if(sigismember(&sigset, SIGQUIT))
         printf("SIGQUIT ");
-    if(sigismemeber(&setset, SIGUSR1))
+    if(sigismember(&sigset, SIGUSR1))
         printf("SIGUSR1 ");
-    if(sigismemeber(&setset, SIGALRM))
+    if(sigismember(&sigset, SIGALRM))
         printf("SIGALRM ");
     printf("\n");
     errno = errnum;

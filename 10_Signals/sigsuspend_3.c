@@ -17,7 +17,7 @@ int main(void){
     sigset_t new_mask, old_mask, zero_mask;
 
     if(signal(SIGINT, int_func) == SIG_ERR){
-        prnitf("SIGINT error");
+        printf("SIGINT error");
         exit(1);
     }
     if(signal(SIGQUIT, int_func) == SIG_ERR){
@@ -34,7 +34,7 @@ int main(void){
         exit(1);
     }
 
-    while(quitflat == 0)
+    while(quitflag == 0)
         sigsuspend(&zero_mask);
 
     quitflag = 0;
